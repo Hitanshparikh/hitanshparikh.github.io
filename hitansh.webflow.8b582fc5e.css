@@ -2557,7 +2557,7 @@ figcaption {
 }
 
 .page-padding.boxed.wee.pookie {
-    background-image: url("https://uploads-ssl.webflow.com/62af52cf612c974768d3d8c9/62be8165511ff0fb958c4ad9_bigbirds.png");
+    background-image: url("back_image.png");
     background-position: 50% 100%;
     background-size: contain;
     background-attachment: fixed;
@@ -2612,7 +2612,7 @@ figcaption {
 }
 
 .page-padding.boxed.spec.asdg.pookie {
-    background-image: url("https://uploads-ssl.webflow.com/62af52cf612c974768d3d8c9/62be8165511ff0fb958c4ad9_bigbirds.png");
+    background-image: url("back_image.png");
     background-position: 50% 0;
     background-repeat: repeat;
     background-size: contain;
@@ -6488,7 +6488,7 @@ figcaption {
         padding-bottom: 60px;
     }
     .page-padding.boxed.wee.pookie {
-        background-image: url("https://uploads-ssl.webflow.com/62af52cf612c974768d3d8c9/62be8165511ff0fb958c4ad9_bigbirds.png");
+        background-image: url("back_image.png");
         background-position: 50%;
         background-repeat: repeat;
         background-size: contain;
