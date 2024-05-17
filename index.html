@@ -27,7 +27,7 @@
     <meta name="twitter:title" content="Hitansh Parikh - Multidisciplinary Designer">
     <meta name="twitter:image" content="https://uploads-ssl.webflow.com/6644c6655ac9ac9ea8613d30/6644f34141b7f9daee71cd78_dark_space-wallpaper-2880x1080.jpg">
     <link rel="shortlink" href="https://hitanshparikh.github.io/">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/apple-touch-icon">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/apple-touch-icon">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
@@ -113,8 +113,8 @@
                 <div id="about">
                     <div class="hero">
                         <div class="hero_bg" data-lenis-parallax=".5">
-                            <div class="video-container">
-                                <video id="hero-bg-video" autoplay muted playsinline loop preload="auto" 
+                            <div class="video-container" style="position: relative; width: 100%; height: 100vh;">
+                                <video id="hero-bg-video" style="width: 100%; height: 100%; object-fit: cover;" autoplay muted playsinline loop preload="auto" 
                                        data-pc="https://s3.amazonaws.com/webflow-prod-assets/6644c6655ac9ac9ea8613d30/66465ed1dc2f2f48271d6dd8_video%201.mp4" 
                                        data-mobile="https://s3.amazonaws.com/webflow-prod-assets/6644c6655ac9ac9ea8613d30/66465ed1dc2f2f48271d6dd8_video%201.mp4">
                                 </video>
@@ -123,52 +123,33 @@
                             <script>
                                 document.addEventListener('DOMContentLoaded', () => {
                                     const video = document.getElementById('hero-bg-video');
-
-                                    // Set the video source based on the device
-                                    const setVideoSource = () => {
-                                        const source = window.innerWidth <= 768 ? video.dataset.mobile : video.dataset.pc;
-                                        if (source) {
-                                            video.src = source;
-                                        }
-                                    };
-
-                                    // Call the function to set the video source
-                                    setVideoSource();
-
+                                    
                                     // Observer to handle muting/unmuting based on visibility
                                     const observer = new IntersectionObserver((entries) => {
                                         entries.forEach(entry => {
                                             if (entry.isIntersecting) {
                                                 video.muted = false;
-                                                video.play(); // Ensure the video plays when in view
                                             } else {
                                                 video.muted = true;
-                                                video.pause(); // Pause the video when out of view
                                             }
                                         });
                                     }, {
                                         threshold: 0.5 // Adjust this value as needed
                                     });
-
+                                    
                                     observer.observe(video);
-
-                                    // Optional: Reset the video loop from start to 1:06 (66 seconds)
+    
+                                    // Set video loop from start to 1:06 (66 seconds)
                                     video.addEventListener('timeupdate', () => {
                                         if (video.currentTime >= 66) {
                                             video.currentTime = 0;
                                             video.play();
                                         }
                                     });
-
-                                    // Listen for window resize events to update video source if needed
-                                    window.addEventListener('resize', setVideoSource);
                                 });
                             </script>
+    
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
                         <div class="hero_content">
                             <div class="row justify-content-center">
                                 <div class="col-lg-4 col-sm-8 col-12 hero_content_inner js-cursor-extend">
@@ -695,11 +676,60 @@
                             </div>
                         </div>
                     </div>
-                    <div class="video" id="video">
+
+
+                
+                    <div class="video" id="video-section">
                         <div class="videoPlayer js-videoPlayer">
-                            <div class="videoPlayer_inner js-videoPlayer_inner"><video id="videoPlayer" playsinline muted loop preload="auto" data-poster="https://uploads-ssl.webflow.com/6644c6655ac9ac9ea8613d30/6644da8f43c91a2945146ed6_Screenshot%202024-05-15%20212308.png" data-poster-mobile="https://uploads-ssl.webflow.com/6644c6655ac9ac9ea8613d30/6644da8f43c91a2945146ed6_Screenshot%202024-05-15%20212308.png" data-src-mobile="https://s3.amazonaws.com/webflow-prod-assets/6644c6655ac9ac9ea8613d30/6644db4fca1da634ede84eca_reel%20video.mp4" data-src="https://s3.amazonaws.com/webflow-prod-assets/6644c6655ac9ac9ea8613d30/6644db4fca1da634ede84eca_reel%20video.mp4"
-                                    width="1920" height="1080"></video><button class="js-btnBigPlay videoPlayer_btn"><img src="assets/icons/ic-play.svg" alt="icon-play"></button></div>
-                                </div>
+                            <div class="videoPlayer_inner js-videoPlayer_inner">
+                                <video id="videoPlayer" playsinline muted loop preload="auto"
+                                    data-poster="https://uploads-ssl.webflow.com/6644c6655ac9ac9ea8613d30/6644da8f43c91a2945146ed6_Screenshot%202024-05-15%20212308.png"
+                                    data-poster-mobile="https://uploads-ssl.webflow.com/6644c6655ac9ac9ea8613d30/6644da8f43c91a2945146ed6_Screenshot%202024-05-15%20212308.png"
+                                    data-src-mobile="https://s3.amazonaws.com/webflow-prod-assets/6644c6655ac9ac9ea8613d30/6644db4fca1da634ede84eca_reel%20video.mp4"
+                                    data-src="https://s3.amazonaws.com/webflow-prod-assets/6644c6655ac9ac9ea8613d30/6644db4fca1da634ede84eca_reel%20video.mp4"
+                                    width="1920" height="1080"></video>
+                                <button class="js-btnBigPlay videoPlayer_btn">
+                                    <img src="assets/icons/ic-play.svg" alt="icon-play">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <script>
+                        document.addEventListener("DOMContentLoaded", () => {
+                            const video = document.getElementById('videoPlayer');
+                            const videoSection = document.getElementById('video-section');
+                
+                            // Ensure the video source is set from data-src attribute
+                            const setVideoSource = () => {
+                                const source = video.dataset.src;
+                                if (source) {
+                                    video.src = source;
+                                }
+                            };
+                
+                            // Set video source
+                            setVideoSource();
+                
+                            // Initialize Intersection Observer
+                            const observer = new IntersectionObserver((entries) => {
+                                entries.forEach(entry => {
+                                    if (entry.isIntersecting) {
+                                        video.muted = false;  // Unmute the video when the section is in view
+                                    } else {
+                                        video.muted = true;   // Mute the video when the section is out of view
+                                    }
+                                });
+                            }, {
+                                threshold: 0.5 // Adjust this value as needed
+                            });
+                
+                            // Start observing the video section
+                            observer.observe(videoSection);
+                        });
+                    </script>
+
+
                     <div class="testimonials js-testimonials">
                         <div class="row">
                             <div class="col-lg-8 col-sm-10 col-12 offset-lg-2 offset-sm-1">
@@ -810,8 +840,8 @@
                                         <div class="heading-mask_el heading-mask_el__masking"><a href="https://www.instagram.com/hitansh_parikh/" class="text-dark contact_link" target="_blank">Not Tiktok</a></div>
                                     </li>
                                     <li class="heading-mask social-link js-cursor-contract heading-mask__now h3">
-                                        <div class="heading-mask_el heading-mask_el__deep"><a href="https://hitanshparikh.github.io/old-website/" class="contact_link" target="_blank">My old Website</a></div>
-                                        <div class="heading-mask_el heading-mask_el__masking"><a href="https://hitanshparikh.github.io/old-website/" class="text-dark contact_link" target="_blank">Do not open it</a></div>
+                                        <div class="heading-mask_el heading-mask_el__deep"><a href="https://hitanshparikh.github.io/" class="contact_link" target="_blank">My old Website</a></div>
+                                        <div class="heading-mask_el heading-mask_el__masking"><a href="https://hitanshparikh.github.io/" class="text-dark contact_link" target="_blank">Do not open it</a></div>
                                     </li>
                                     <li class="heading-mask social-link js-cursor-contract heading-mask__now h3">
                                         <div class="heading-mask_el heading-mask_el__deep"><a href="https://www.fiverr.com/hitanshparikh?up_rollout=true#!" class="contact_link" target="_blank">fiverr</a></div>
@@ -1421,7 +1451,7 @@
                         <div class="col-lg-3 col-sm-5 col-12">
                             <ul class="ul__reset">
                                 <li class="heading-mask social-link js-cursor-contract heading-mask__now h3"><a href="https://www.instagram.com/hitansh_parikh/" class="text-dark contact_link" target="_blank">Not Tiktok</a></li>
-                                <li class="heading-mask social-link js-cursor-contract heading-mask__now h3"><a href="https://hitanshparikh.github.io/old-website/" class="text-dark contact_link" target="_blank">Do not Open</a></li>
+                                <li class="heading-mask social-link js-cursor-contract heading-mask__now h3"><a href="https://hitanshparikh.github.io/" class="text-dark contact_link" target="_blank">Do not Open</a></li>
                                 <li class="heading-mask social-link js-cursor-contract heading-mask__now h3"><a href="https://www.fiverr.com/hitanshparikh?public_mode=true" class="text-dark contact_link" target="_blank">Money Money</a></li>
                             </ul>
                         </div>
@@ -1442,7 +1472,7 @@
     </main>
     <footer id="js-footer" class="footer">
         <ul class="footer_socials ul__reset">
-            <li class="social js-social"><a class="social_link social_link__dribbble" href="https://hitanshparikh.github.io/old-website/" target="_blank" aria-label="Visit my Old Website"><img src="assets/icons/ic-dribbble.svg" class="svg" alt="Dribbble icon"></a></li>
+            <li class="social js-social"><a class="social_link social_link__dribbble" href="https://hitanshparikh.github.io/" target="_blank" aria-label="Visit my Old Website"><img src="assets/icons/ic-dribbble.svg" class="svg" alt="Dribbble icon"></a></li>
             <li class="social js-social"><a class="social_link social_link__instagram" href="https://www.instagram.com/hitansh_parikh/" target="_blank" aria-label="Visit my Instagram profile"><img src="assets/icons/ic-ig.svg" class="svg" alt="Instagram icon"></a></li>
             <li class="social js-social"><a class="social_link social_link__youtube" href="https://www.youtube.com/channel/UCwggDYbxMTB4AtuiYAOha3Q" target="_blank" aria-label="Visit my YouTube channel"><img src="assets/icons/ic-ytb.svg" class="svg" alt="YouTube icon"></a></li>
             <li class="social js-social"><a class="social_link social_link__linkedin" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" aria-label="Visit my LinkedIn profile"><img src="assets/icons/ic-in.svg" class="svg" alt="LinkedIn icon"></a></li>
