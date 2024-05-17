@@ -113,8 +113,8 @@
                 <div id="about">
                     <div class="hero">
                         <div class="hero_bg" data-lenis-parallax=".5">
-                            <div class="video-container">
-                                <video id="hero-bg-video" autoplay muted playsinline loop preload="auto" 
+                            <div class="video-container" style="position: relative; width: 100%; height: 100vh;">
+                                <video id="hero-bg-video" style="width: 100%; height: 100%; object-fit: cover;" autoplay muted playsinline loop preload="auto" 
                                        data-pc="https://s3.amazonaws.com/webflow-prod-assets/6644c6655ac9ac9ea8613d30/66465ed1dc2f2f48271d6dd8_video%201.mp4" 
                                        data-mobile="https://s3.amazonaws.com/webflow-prod-assets/6644c6655ac9ac9ea8613d30/66465ed1dc2f2f48271d6dd8_video%201.mp4">
                                 </video>
@@ -123,54 +123,31 @@
                             <script>
                                 document.addEventListener('DOMContentLoaded', () => {
                                     const video = document.getElementById('hero-bg-video');
-
-                                    // Set the video source based on the device
-                                    const setVideoSource = () => {
-                                        const source = window.innerWidth <= 768 ? video.dataset.mobile : video.dataset.pc;
-                                        if (source) {
-                                            video.src = source;
-                                        }
-                                    };
-
-                                    // Call the function to set the video source
-                                    setVideoSource();
-
+                                    
                                     // Observer to handle muting/unmuting based on visibility
                                     const observer = new IntersectionObserver((entries) => {
                                         entries.forEach(entry => {
                                             if (entry.isIntersecting) {
                                                 video.muted = false;
-                                                video.play(); // Ensure the video plays when in view
                                             } else {
                                                 video.muted = true;
-                                                video.pause(); // Pause the video when out of view
                                             }
                                         });
                                     }, {
                                         threshold: 0.5 // Adjust this value as needed
                                     });
-
+                                    
                                     observer.observe(video);
-
-                                    // Optional: Reset the video loop from start to 1:06 (66 seconds)
+    
+                                    // Set video loop from start to 1:06 (66 seconds)
                                     video.addEventListener('timeupdate', () => {
                                         if (video.currentTime >= 66) {
                                             video.currentTime = 0;
                                             video.play();
                                         }
                                     });
-
-                                    // Listen for window resize events to update video source if needed
-                                    window.addEventListener('resize', setVideoSource);
                                 });
                             </script>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-
                         </div>
                         <div class="hero_content">
                             <div class="row justify-content-center">
