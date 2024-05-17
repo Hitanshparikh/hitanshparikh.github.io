@@ -106,7 +106,6 @@
                         class="header_menu_item js-cursor-contract"><a href="#contact" class="desc text-uppercase"><span class="header_menu_item_inner"><span class="header_menu_item_link header_menu_item_link__deep">Contact</span> <span class="header_menu_item_link header_menu_item_link__active">Contact</span></span></a></li>
             </ul>
         </div>
-    </header>
     <main class="main-layer js-pageContent">
         <div class="layer layer__dark">
             <div class="container">
@@ -135,15 +134,17 @@
                                     // Call the function to set the video source
                                     setVideoSource();
 
+                                    // Play the video when page loads
+                                    video.muted = true; // Ensure it's muted initially
+                                    video.play();
+
                                     // Observer to handle muting/unmuting based on visibility
                                     const observer = new IntersectionObserver((entries) => {
                                         entries.forEach(entry => {
                                             if (entry.isIntersecting) {
                                                 video.muted = false;
-                                                video.play(); // Ensure the video plays when in view
                                             } else {
                                                 video.muted = true;
-                                                video.pause(); // Pause the video when out of view
                                             }
                                         });
                                     }, {
@@ -169,15 +170,6 @@
                 </div>
             </div>
         </div>
-                        <div class="hero_content">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-4 col-sm-8 col-12 hero_content_inner js-cursor-extend">
-                                    <h6 class="text-center hero_content_inner_subtitle js-anim--lines--sim" data-screen-offset="0.8">Hitansh Parikh</h6>
-                                    <h1 class="text-center js-anim--chars mb-0" data-screen-offset="0.6">making<br><strong>good</strong><br><strong>shit</strong><br>since<br>2020</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="about js-about">
                         <div class="row about_me">
                             <div class="col-lg-8 col-sm-10 col-12 offset-lg-2 offset-sm-1">
