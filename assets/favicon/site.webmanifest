@@ -1,0 +1,20 @@
+{
+    "name": "Minh Pham - Multidisciplinary Designer",
+    "short_name": "Minh Pham",
+    "icons": [
+        {
+            "src": "android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/index.html",
+    "theme_color": "#0d0d0d",
+    "background_color": "#0d0d0d",
+    "display": "standalone"
+}
