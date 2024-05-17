@@ -106,6 +106,7 @@
                         class="header_menu_item js-cursor-contract"><a href="#contact" class="desc text-uppercase"><span class="header_menu_item_inner"><span class="header_menu_item_link header_menu_item_link__deep">Contact</span> <span class="header_menu_item_link header_menu_item_link__active">Contact</span></span></a></li>
             </ul>
         </div>
+    </header>
     <main class="main-layer js-pageContent">
         <div class="layer layer__dark">
             <div class="container">
@@ -134,17 +135,15 @@
                                     // Call the function to set the video source
                                     setVideoSource();
 
-                                    // Play the video when page loads
-                                    video.muted = true; // Ensure it's muted initially
-                                    video.play();
-
                                     // Observer to handle muting/unmuting based on visibility
                                     const observer = new IntersectionObserver((entries) => {
                                         entries.forEach(entry => {
                                             if (entry.isIntersecting) {
                                                 video.muted = false;
+                                                video.play(); // Ensure the video plays when in view
                                             } else {
                                                 video.muted = true;
+                                                video.pause(); // Pause the video when out of view
                                             }
                                         });
                                     }, {
@@ -170,7 +169,8 @@
                 </div>
             </div>
         </div>
-                        
+    
+                        </div>
                         <div class="hero_content">
                             <div class="row justify-content-center">
                                 <div class="col-lg-4 col-sm-8 col-12 hero_content_inner js-cursor-extend">
