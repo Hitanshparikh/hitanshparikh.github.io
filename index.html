@@ -135,7 +135,6 @@
                                     // Call the function to set the video source
                                     setVideoSource();
 
-                                    // Observer to handle muting/unmuting based on visibility
                                     const observer = new IntersectionObserver((entries) => {
                                         entries.forEach(entry => {
                                             if (entry.isIntersecting) {
