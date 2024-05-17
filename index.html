@@ -27,7 +27,7 @@
     <meta name="twitter:title" content="Hitansh Parikh - Multidisciplinary Designer">
     <meta name="twitter:image" content="https://uploads-ssl.webflow.com/6644c6655ac9ac9ea8613d30/6644f34141b7f9daee71cd78_dark_space-wallpaper-2880x1080.jpg">
     <link rel="shortlink" href="https://hitanshparikh.github.io/">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/apple-touch-icon">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/apple-touch-icon">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
@@ -168,8 +168,7 @@
                     </div>
                 </div>
             </div>
-    
-                        </div>
+        </div>
                         <div class="hero_content">
                             <div class="row justify-content-center">
                                 <div class="col-lg-4 col-sm-8 col-12 hero_content_inner js-cursor-extend">
@@ -696,60 +695,11 @@
                             </div>
                         </div>
                     </div>
-
-
-                
-                    <div class="video" id="video-section">
+                    <div class="video" id="video">
                         <div class="videoPlayer js-videoPlayer">
-                            <div class="videoPlayer_inner js-videoPlayer_inner">
-                                <video id="videoPlayer" playsinline muted loop preload="auto"
-                                    data-poster="https://uploads-ssl.webflow.com/6644c6655ac9ac9ea8613d30/6644da8f43c91a2945146ed6_Screenshot%202024-05-15%20212308.png"
-                                    data-poster-mobile="https://uploads-ssl.webflow.com/6644c6655ac9ac9ea8613d30/6644da8f43c91a2945146ed6_Screenshot%202024-05-15%20212308.png"
-                                    data-src-mobile="https://s3.amazonaws.com/webflow-prod-assets/6644c6655ac9ac9ea8613d30/6644db4fca1da634ede84eca_reel%20video.mp4"
-                                    data-src="https://s3.amazonaws.com/webflow-prod-assets/6644c6655ac9ac9ea8613d30/6644db4fca1da634ede84eca_reel%20video.mp4"
-                                    width="1920" height="1080"></video>
-                                <button class="js-btnBigPlay videoPlayer_btn">
-                                    <img src="assets/icons/ic-play.svg" alt="icon-play">
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <script>
-                        document.addEventListener("DOMContentLoaded", () => {
-                            const video = document.getElementById('videoPlayer');
-                            const videoSection = document.getElementById('video-section');
-                
-                            // Ensure the video source is set from data-src attribute
-                            const setVideoSource = () => {
-                                const source = video.dataset.src;
-                                if (source) {
-                                    video.src = source;
-                                }
-                            };
-                
-                            // Set video source
-                            setVideoSource();
-                
-                            // Initialize Intersection Observer
-                            const observer = new IntersectionObserver((entries) => {
-                                entries.forEach(entry => {
-                                    if (entry.isIntersecting) {
-                                        video.muted = false;  // Unmute the video when the section is in view
-                                    } else {
-                                        video.muted = true;   // Mute the video when the section is out of view
-                                    }
-                                });
-                            }, {
-                                threshold: 0.5 // Adjust this value as needed
-                            });
-                
-                            // Start observing the video section
-                            observer.observe(videoSection);
-                        });
-                    </script>
-
-
+                            <div class="videoPlayer_inner js-videoPlayer_inner"><video id="videoPlayer" playsinline muted loop preload="auto" data-poster="https://uploads-ssl.webflow.com/6644c6655ac9ac9ea8613d30/6644da8f43c91a2945146ed6_Screenshot%202024-05-15%20212308.png" data-poster-mobile="https://uploads-ssl.webflow.com/6644c6655ac9ac9ea8613d30/6644da8f43c91a2945146ed6_Screenshot%202024-05-15%20212308.png" data-src-mobile="https://s3.amazonaws.com/webflow-prod-assets/6644c6655ac9ac9ea8613d30/6644db4fca1da634ede84eca_reel%20video.mp4" data-src="https://s3.amazonaws.com/webflow-prod-assets/6644c6655ac9ac9ea8613d30/6644db4fca1da634ede84eca_reel%20video.mp4"
+                                    width="1920" height="1080"></video><button class="js-btnBigPlay videoPlayer_btn"><img src="assets/icons/ic-play.svg" alt="icon-play"></button></div>
+                                </div>
                     <div class="testimonials js-testimonials">
                         <div class="row">
                             <div class="col-lg-8 col-sm-10 col-12 offset-lg-2 offset-sm-1">
