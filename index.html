@@ -68,6 +68,19 @@
             /* Firefox */
         }
     </style>
+    <style>
+    /* Hide scrollbar for all browsers */
+    body {
+      overflow: hidden; /* Hide scrollbars */
+      overflow-y: scroll; /* Enable vertical scrolling */
+      scrollbar-width: none; /* Firefox */
+    }
+
+    /* Hide scrollbar for webkit browsers (Chrome, Safari) */
+    body::-webkit-scrollbar {
+      display: none;
+    }
+    </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-79VFDFP12E"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
