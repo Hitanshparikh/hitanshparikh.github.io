@@ -5,7 +5,9 @@
     font-weight: 600;
     src: url(assets/fonts/4dd591d8-4168-4263-b05b-7183ddaff1f4.woff2) format("woff2"), url(assets/fonts/90882e39-7091-4415-b231-1e068ccdcc6f.woff) format("woff")
 }
-
+::-webkit-scrollbar {
+    display: none;
+}
 .fill-black {
     fill: #000
 }
