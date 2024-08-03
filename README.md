@@ -17,18 +17,6 @@ I'm a passionate coder and creative freelancer with over 4 years of experience i
 - ThreeJS
 - React
 
-## 🌐 Technologies I've Mastered:
-- JavaScript
-- Python
-- C
-- C++
-- HTML
-- CSS
-- Java
-- Bootstrap
-- PHP
-- SQL
-
 ## 🏓 Hobbies:
 - Playing table tennis and chess to keep my mind sharp and active.
 
