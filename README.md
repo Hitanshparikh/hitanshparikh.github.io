@@ -1,5 +1,44 @@
 # 💫 About Me:
-🌟 Hi, I'm Hitansh Parikh! 🌟<br><br>I'm a passionate coder and creative freelancer with over 4 years of experience in web development, 3D art, animation, video creation, and graphic design. My journey through the world of technology and design has been nothing short of thrilling!<br><br>🚀 What I Do:<br><br>Web Development: Building beautiful, functional websites with a knack for detail and a love for clean code.<br>3D Art & Animation: Crafting stunning visuals that bring ideas to life.<br>Video Creation: Telling compelling stories through engaging videos.<br>Graphic Design: Designing eye-catching graphics that stand out.<br>💡 Currently Learning:<br><br>Java, Django, NodeJS, NextJS, ThreeJS, React<br>🌐 Technologies I've Mastered:<br><br>JavaScript, Python, C, C++, HTML, CSS, Java, Bootstrap, PHP, SQL<br>🏓 Hobbies:<br><br>Playing table tennis and chess to keep my mind sharp and active.<br>🍕 Fun Fact:<br><br>I can eat cold pizza while coding—multitasking at its finest!<br>📈 Portfolio: Explore my projects and see what I’ve been working on: hitanshparikh.github.io<br><br>Let's connect and create something amazing together!
+# Hi, I'm Hitansh Parikh! 🌟
+
+I'm a passionate coder and creative freelancer with over 4 years of experience in web development, 3D art, animation, video creation, and graphic design. My journey through the world of technology and design has been nothing short of thrilling!
+
+## 🚀 What I Do:
+- **Web Development:** Building beautiful, functional websites with a knack for detail and a love for clean code.
+- **3D Art & Animation:** Crafting stunning visuals that bring ideas to life.
+- **Video Creation:** Telling compelling stories through engaging videos.
+- **Graphic Design:** Designing eye-catching graphics that stand out.
+
+## 💡 Currently Learning:
+- Java
+- Django
+- NodeJS
+- NextJS
+- ThreeJS
+- React
+
+## 🌐 Technologies I've Mastered:
+- JavaScript
+- Python
+- C
+- C++
+- HTML
+- CSS
+- Java
+- Bootstrap
+- PHP
+- SQL
+
+## 🏓 Hobbies:
+- Playing table tennis and chess to keep my mind sharp and active.
+
+## 🍕 Fun Fact:
+- I can eat cold pizza while coding—multitasking at its finest!
+
+## 📈 Portfolio:
+Explore my projects and see what I’ve been working on: [hitanshparikh.github.io](http://hitanshparikh.github.io)
+
+Let's connect and create something amazing together!
 
 
 ## 🌐 Socials:
