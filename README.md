@@ -36,7 +36,7 @@ Welcome to my portfolio! Here's a glimpse of what you'll find in the code:
 
 Feel free to explore and see how each component contributes to the overall experience of the website!
 
-For a closer look, visit my portfolio: [Hitansh Parikh - Multidisciplinary Designer](https://hitanshparikh.github.io/)
+For a closer look, visit my portfolio: [Hitansh Parikh - Multidisciplinary Designer](https://hitanshparikh.com/)
 
 ## 🔗 **Links**
 
