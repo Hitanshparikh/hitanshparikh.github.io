@@ -40,7 +40,7 @@ For a closer look, visit my portfolio: [Hitansh Parikh - Multidisciplinary Desig
 
 ## 🔗 **Links**
 
-- **Portfolio Website**: [hitanshparikh.github.io](https://hitanshparikh.github.io/)
+- **Portfolio Website**: [hitanshparikh.com](https://hitanshparikh.com/)
 - **GitHub**: [hitanshparikh](https://github.com/hitanshparikh)
 - **LinkedIn**: [Hitansh Parikh](https://linkedin.com/in/hitanshparikh)
 
